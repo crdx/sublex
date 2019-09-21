@@ -10,7 +10,7 @@ class PatternExcluder:
         for pattern in open(file):
             pattern = pattern.strip()
 
-            if len(pattern) == 0 or pattern[0] == '#':
+            if len(pattern) == 0 or pattern[0] == '#' or pattern[0] == '!':
                 continue
 
             # Trailing slash determines if this is is a folder
