@@ -13,8 +13,6 @@ The API does not support an event when a project is loaded, so the compromise is
 
 The refresh action has been kept extremely lightweight (one file read) so that calling it regularly is not intensive.
 
-To work out the difference between a folder and a file **the trailing slash (`/`) in your .gitignore is significant**. If you find the plugin is not working correclty, ensure that all your exclusions have trailing slashes where needed.
-
 ## Supported files
 
 Only `.gitignore` is supported at the moment, but in theory any project-level pattern-holding exclusion file is a candidate for inclusion.

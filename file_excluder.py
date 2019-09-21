@@ -13,13 +13,16 @@ class PatternExcluder:
             if len(pattern) == 0 or pattern[0] == '#' or pattern[0] == '!':
                 continue
 
+            # Strip leading slash if it exists
+            if pattern[0] == os.sep:
+                pattern = pattern[1:]
+
             # Trailing slash determines if this is is a folder
             if (pattern[-1] == os.sep):
-                # Strip leading slash now too if it exists
-                if pattern[0] == os.sep:
-                    pattern = pattern[1:]
                 folder_patterns.append(pattern[:-1])
             else:
+                # In gitignore patterns match both folders and files
+                folder_patterns.append(pattern)
                 file_patterns.append(pattern)
 
         return [file_patterns, folder_patterns]
