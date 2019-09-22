@@ -1,16 +1,30 @@
 import sublime_plugin
 import os
+import re
 
 class PatternExcluder:
     @staticmethod
     def get_patterns(file):
         file_patterns = []
         folder_patterns = []
+        skip = 0
 
         for pattern in open(file):
             pattern = pattern.strip()
 
-            if len(pattern) == 0 or pattern[0] == '#' or pattern[0] == '!':
+            if skip:
+                skip -= 1
+                continue
+
+            # Negative ('!') globs supported by gitignore have no meaning here
+            if len(pattern) == 0 or pattern[0] == '!':
+                continue
+
+            # Look for a special comment indicating exclusions
+            if pattern[0] == '#':
+                match = re.search('# ?sublime-file-excluder: ignore next( \d+)?', pattern)
+                if match:
+                    skip = int(match.group(1) or 1)
                 continue
 
             # Strip leading slash if it exists
