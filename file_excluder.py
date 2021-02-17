@@ -32,7 +32,7 @@ class PatternExcluder:
                 pattern = pattern[1:]
 
             # Trailing slash determines if this is is a folder
-            if (pattern[-1] == os.sep):
+            if pattern[-1] == os.sep:
                 folder_patterns.append(pattern[:-1])
             else:
                 # In gitignore patterns match both folders and files
@@ -67,7 +67,7 @@ class PatternExcluder:
     def add_patterns_from_file(self, file_name):
         for folder in self.project_data['folders']:
             file = os.path.join(folder['path'], file_name)
-            if (os.path.exists(file)):
+            if os.path.exists(file):
                 file_patterns, folder_patterns = self.get_patterns(file)
                 folder['file_exclude_patterns'] = file_patterns
                 folder['folder_exclude_patterns'] = folder_patterns
