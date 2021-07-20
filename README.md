@@ -2,6 +2,10 @@
 
 Sublime Text 3 does not have a way to hide files or directories from the tree based on the contents of the `.gitignore` file at the root of the currently-loaded project. This plugin adds that functionality.
 
+## Installation
+
+Clone this repository in your packages directory (e.g. `~/.config/sublime-text-3/Packages`).
+
 ## File support
 
 Only `.gitignore` is supported at the moment, but in theory any project-level pattern-holding exclusion file is a candidate for inclusion.
