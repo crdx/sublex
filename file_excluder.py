@@ -16,26 +16,27 @@ class PatternExcluder:
                 skip -= 1
                 continue
 
-            # Negative ('!') globs supported by gitignore have no meaning here
+            # Negative ('!') globs supported by gitignore have no
+            # meaning here.
             if len(pattern) == 0 or pattern[0] == '!':
                 continue
 
-            # Look for a special comment indicating exclusions
+            # Look for a special comment indicating exclusions.
             if pattern[0] == '#':
                 match = re.search('# ?sublime-file-excluder: ignore next( \d+)?', pattern)
                 if match:
                     skip = int(match.group(1) or 1)
                 continue
 
-            # Strip leading slash if it exists
+            # Strip leading slash if it exists.
             if pattern[0] == os.sep:
                 pattern = pattern[1:]
 
-            # Trailing slash determines if this is is a folder
+            # Trailing slash determines if this is is a folder.
             if pattern[-1] == os.sep:
                 folder_patterns.append(pattern[:-1])
             else:
-                # In gitignore patterns match both folders and files
+                # In gitignore patterns match both folders and files.
                 folder_patterns.append(pattern)
                 file_patterns.append(pattern)
 
