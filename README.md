@@ -41,7 +41,7 @@ The refresh action has been kept extremely lightweight (one file read) so that c
 
 ## Bugs or contributions
 
-Open an [issue](http://github.com/crdx/sublime-file-excluder/issues) or send a [pull request](http://github.com/crdx/sublime-file-excluder/pulls).
+Open an [issue](https://github.com/crdx/sublime-file-excluder/issues) or send a [pull request](https://github.com/crdx/sublime-file-excluder/pulls).
 
 ## Licence
 
