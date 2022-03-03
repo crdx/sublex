@@ -39,7 +39,7 @@ The API does not support an event when a project is loaded, so the compromise is
 
 The refresh action has been kept extremely lightweight (one file read) so that calling it regularly is not intensive.
 
-## Bugs or contributions
+## Contributions
 
 Open an [issue](https://github.com/crdx/sublime-file-excluder/issues) or send a [pull request](https://github.com/crdx/sublime-file-excluder/pulls).
 
