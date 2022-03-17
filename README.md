@@ -1,6 +1,6 @@
 # sublime-file-excluder
 
-Sublime Text 3 does not have a way to hide files or directories from the tree based on the contents of the `.gitignore` file at the root of the currently-loaded project. This plugin adds that functionality.
+**sublime-file-excluder** is a plugin that hides gitignored files from the Sublime Text file tree.
 
 ## Installation
 
