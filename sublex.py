@@ -23,7 +23,7 @@ class PatternExcluder:
 
             # Look for a special comment indicating exclusions.
             if pattern[0] == '#':
-                match = re.search('# ?sublime-file-excluder: ignore next( \d+)?', pattern)
+                match = re.search('# ?sublex: ignore next( \d+)?', pattern)
                 if match:
                     skip = int(match.group(1) or 1)
                 continue

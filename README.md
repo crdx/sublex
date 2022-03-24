@@ -1,6 +1,6 @@
-# sublime-file-excluder
+# sublex
 
-**sublime-file-excluder** is a plugin that hides gitignored files from the Sublime Text file tree.
+**sublex** is a Sublime Text plugin which excludes gitignored files from the tree.
 
 ## Installation
 
@@ -15,14 +15,14 @@ Only `.gitignore` is supported at the moment, but in theory any project-level pa
 It is possible to use a special comment to indicate that a certain pattern should be ignored by this plugin. For example you may not want to check in your `*.env` files, but still be able to view and edit them.
 
 ```bash
-# sublime-file-excluder: ignore next
+# sublex: ignore next
 *.env
 ```
 
-It is also possible to ignore the next `n` lines by specifying a number after `ignore next`. For example:
+It's also possible to ignore the next `n` lines by specifying a number after `ignore next`. For example:
 
 ```bash
-# sublime-file-excluder: ignore next 3
+# sublex: ignore next 3
 development.env
 production.env
 test.env
@@ -41,7 +41,7 @@ The refresh action has been kept extremely lightweight (one file read) so that c
 
 ## Contributions
 
-Open an [issue](https://github.com/crdx/sublime-file-excluder/issues) or send a [pull request](https://github.com/crdx/sublime-file-excluder/pulls).
+Open an [issue](https://github.com/crdx/sublex/issues) or send a [pull request](https://github.com/crdx/sublex/pulls).
 
 ## Licence
 
