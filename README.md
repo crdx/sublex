@@ -4,7 +4,7 @@
 
 ## Installation
 
-Clone this repository in your packages directory (e.g. `~/.config/sublime-text-3/Packages`).
+Clone this repository in your packages directory (e.g. `~/.config/sublime-text/Packages`).
 
 ## File support
 
