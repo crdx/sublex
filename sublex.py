@@ -16,8 +16,7 @@ class PatternExcluder:
                 skip -= 1
                 continue
 
-            # Negative ('!') globs supported by gitignore have no
-            # meaning here.
+            # Negative ('!') globs supported by gitignore have no meaning here.
             if len(pattern) == 0 or pattern[0] == '!':
                 continue
 
